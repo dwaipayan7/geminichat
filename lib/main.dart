@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:geminichat/HomePage.dart';
+import 'package:geminichat/splashScreen.dart';
+import 'package:geminichat/themes.dart';
+
+import 'onboarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Gemini Chat',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Homepage(),
+      theme: lightMode,
+      darkTheme: darkMode,
+      home: Splashscreen(),
     );
   }
 }
