@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_native_splash: ^2.4.1
   flutter_riverpod: ^2.6.0
-  flutter_dotenv:
+  flutter_dotenv: ^5.2.1
   google_generative_ai:
   riverpod: ^2.6.0
   hooks_riverpod: ^2.6.0
