@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:geminichat/message.dart';
+import 'package:geminichat/model/message.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -59,12 +59,12 @@ class _HomepageState extends State<Homepage> {
                             color: message.isUser ? Theme.of(context).colorScheme.primary :
                             Theme.of(context).colorScheme.secondary,
                             borderRadius: message.isUser?
-                            BorderRadius.only(
+                            const BorderRadius.only(
                                 topLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20)
                             ) :
-                            BorderRadius.only(
+                            const BorderRadius.only(
                                 topRight: Radius.circular(20),
                                 bottomRight: Radius.circular(20),
                                 bottomLeft: Radius.circular(20)
@@ -111,7 +111,7 @@ class _HomepageState extends State<Homepage> {
                             color: Colors.grey
                           ),
                         border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(
+                        contentPadding: const EdgeInsets.symmetric(
                           horizontal: 20,
                         )
                       ),

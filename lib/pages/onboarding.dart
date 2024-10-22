@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:geminichat/HomePage.dart';
+import 'package:geminichat/pages/HomePage.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
@@ -14,7 +14,7 @@ class Onboarding extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
           children: [
-            Column(
+            const Column(
               children: [
                 Text('Your AI Assistant',
                 style: TextStyle(
@@ -33,14 +33,23 @@ class Onboarding extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 32,),
+            const SizedBox(height: 32,),
             Image.asset('assets/onboarding.png'),
-            SizedBox(height: 32,),
+            const SizedBox(height: 32,),
             ElevatedButton(
                 onPressed: (){
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homepage()));
                 },
-                child: Row(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                padding: EdgeInsets.symmetric(
+                  vertical: 16, horizontal: 32
+                )
+              ),
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -51,15 +60,6 @@ class Onboarding extends StatelessWidget {
                     Icon(Icons.arrow_forward, color: Colors.white,)
                   ],
                 ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                padding: EdgeInsets.symmetric(
-                  vertical: 16, horizontal: 32
-                )
-              ),
             )
 
           ],

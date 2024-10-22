@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:geminichat/onboarding.dart';
+import 'package:geminichat/pages/onboarding.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -12,14 +12,14 @@ class _SplashscreenState extends State<Splashscreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     splashScreen(3);
   }
 
   void splashScreen(int seconds){
     Future.delayed(Duration(seconds: seconds), ()=>{
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Onboarding()))
+      Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => const Onboarding()))
     });
   }
 
